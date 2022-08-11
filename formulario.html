@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro || Vinos de España</title>
+    <link rel="icon" href="./assets/img/logo-copa.jpg">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--GoogleApis-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="container-fluid p-0">
+    <header class=" sticky-top background_header">
+        <nav class="navbar navbar-expand-lg container  justify-content-between">
+            <div>
+                <a class="p-3 " href="./index.html" id="btnLogo">
+                    <img src="./assets/img/logo-copa-removebg-preview.png" width="64" alt="logo">
+                </a>
+            </div>
+            <div>
+                <a href="./carrito.html" type="button" class="btn position-relative me-3" id="btnCarrito">
+                    <i class="fa-solid fa-cart-shopping fs-4"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        id="contadorCarrito">
+                        0
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class=" container-fluid p-0">
+        <h1 class="text-center tangerine mt-5">
+            Registro de Usuario
+        </h1>
+        <div class=" col-12 col-sm-8 col-lg-5 m-auto mt-5 rounded-4 background_header ">
+            <form id="form" class=" py-3 p-sm-4 px-2 rounded-4 bg-dark opacity-75 text-white">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control " id="nombre" name="nombre" placeholder="Ingresa tu Nombre"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido"
+                        placeholder="Ingresa tu Apellido" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Direccion e-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="@email.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="telefono" name="telefono"
+                        placeholder="(++98) 555-555-555" required>
+                </div>
+                <div class="mb-3">
+                    <label for="domicilio" class="form-label">Domicilio</label>
+                    <input type="text" class="form-control" id="domicilio" name="domicilio"
+                        placeholder=" Av sin Nombre 1234" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="contraseña"
+                        placeholder="Ingresa tu Contraseña " required>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input type="submit" id="btnEnviar" class="btn btn-primary me-2" value="Enviar">
+                    <button type="reset" class="btn btn-secondary me-2">borrar</button>
+                </div>
+                <img src="cid:./assets/img/logo-copa-removebg-preview.png" class="d-none" name="img"></img>
+            </form>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+                emailjs.init('8yPxOUus9ogutU2u8')
+            </script>
+            <div id="error"></div>
+        </div>
+
+    </main>
+    <ul>
+        <li>Tipo:${buscado.tipo}</li>
+        <hr>
+        <li>Denominacion:${buscado.denominacion}</li>
+        <hr>
+        <li>Precio: $${buscado.precio}</li>
+        <hr>
+    </ul>
+    <footer class="pb-1 pt-5 background_header   mt-5 text-white">
+        <div class="container">
+            <div class="row background_header rounded-3 mb-4 py-4 px-5">
+                <div class="col-lg-4 d-flex flex-column justify-content-center ">
+                    <div class="d-flex justify-content-center align-items-end">
+                        <img src="./assets/img/logo-copa-removebg-preview.png" width="70" class="" alt="">
+                        <p class="fs-6 mb-2">Visita nuestras redes sociales</p>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <nav class="nav d-flex justify-content-center rounded-3  bg-dark opacity-75 w-75 ">
+                            <a class="nav-link" href="https://www.facebook.com/" target="_blank">
+                                <i class="fab fa-facebook-f fs-2 text-white border border-white rounded p-2"></i>
+                            </a>
+                            <a class="nav-link" href="https://www.twitter.com/" target="_blank">
+                                <i class="fab fa-twitter fs-2 text-white border border-white rounded p-2"></i>
+                            </a>
+                            <a class="nav-link" href="https://www.instagram.com/" target="_blank">
+                                <i class="fab fa-instagram fs-2 text-white border rounded border-white p-2"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-8 col-md-5 col-lg-3 m-auto">
+                    <h4 class="mb-2 text-center">Horarios de Tienda</h4>
+                    <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between">
+                            <span class="text-center">Lunes</span>
+                            <span>9:00 - 24:00</span>
+                        </li>
+                        <hr class="m-0">
+                        <li class="d-flex justify-content-between">
+                            <span class="text-left">Martes</span>
+                            <span>9:00 - 24:00</span>
+                        </li>
+                        <hr class="m-0">
+                        <li class="d-flex justify-content-between">
+                            <span>Mirecoles</span>
+                            <span>9:00 -
+                                24:00</span>
+                        </li>
+                        <hr class="m-0">
+                        <li class="d-flex justify-content-between">
+                            <span>Jueves</span>
+                            <span>9:00 -
+                                24:00</span>
+                        </li>
+                        <hr class="m-0">
+                        <li class="d-flex justify-content-between">
+                            <span>Viernes</span>
+                            <span>9:00 - 02:00</span>
+                        </li>
+                        <hr class="m-0">
+                        <li class="d-flex justify-content-between">
+                            <span>Sabado</span>
+                            <span>9:00 -
+                                02:00</span>
+                        </li>
+                        <hr class="m-0">
+                        <li class="d-flex justify-content-between">
+                            <span>Domingo</span>
+                            <span>Cerrado</span>
+                        </li>
+                        <hr class="m-0">
+                    </ul>
+                </div>
+                <div class="d-flex flex-column col-lg-2 align-items-center justify-content-center">
+                    <a href="https://www.google.com/maps/place/Vinoteca+%7C+Vinos+de+Espa%C3%B1a+(Lugar+Ficticio)/@-34.9105701,-56.1668795,19z/data=!4m5!3m4!1s0x959f8158fb74b68d:0xe8793b9947c391e2!8m2!3d-34.9105712!4d-56.1663323"
+                        class="my-3 " target="_blank"><i class="fa-solid fa-location-dot text-success fs-1"></i></a>
+                    <h4 class="d-none d-lg-block text-center lh-2">Ubicacion Tienda</h4>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Newsletter</h4>
+                    <p>Suscribite a nuestro Newsletter y enterate de eventos, ofertas , promociones y recibi un Cupón de
+                        10% de Descuento!!</p>
+                    <div class="d-flex align-items-center animate__animated animate__fadeInDown visually-hidden"
+                        id="contCodBtnCopy">
+                        <div class="w-50 bg-secondary rounded-3 padding-2 my-2 d-flex justify-content-evenly ">
+                            <p class="m-0 text-dark bg-white m-1 p-1 rounded-1 w-75" id="codigo">
+                                <!-- Codigo cupon de descuento -->
+                            </p>
+                            <button class="btn btn-sm" id="btnCopy">
+                                <i class="fa-solid fa-copy text-white">
+                                </i>
+                            </button>
+                        </div>
+                        <p class="m-0 p-2 ">
+                            copia tu codigo
+                        </p>
+                    </div>
+                    <form id="formNL">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailNL" aria-describedby="emailNewsletter"
+                                placeholder="Ingresa tu email" name="email">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" id="btnNL"
+                            value="Suscribirme">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class=" d-flex align-items-center background_header">
+            <p class="m-auto text-center mt-2 mb-0 ">
+                Copyright 2022. All Right Reserved. Design and Develop by
+                <i class="ms-1">Daniel Lorenzo</i>
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/alertas.js"></script>
+    <script src="/js/newsletter.js"></script>
+    <script src="./js/validarForm.js"></script>
+</body>
+
+</html>

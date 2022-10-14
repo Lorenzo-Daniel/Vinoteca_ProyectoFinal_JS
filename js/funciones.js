@@ -37,10 +37,10 @@ const agregarAlCarrito = (id) => {
         alertTostyTop("Agregaste un producto al carrito", "linear-gradient(to right, #00b09b, #96c93d)")
         renderProductosCarrito();
     } else {
-        fetch('https://api.jsonbin.io/v3/b/62e938f11c7f436f211c720a')
+        fetch( './js/productos.json')
             .then((resposne) => resposne.json())
             .then((productos) => {
-                let producto = productos.record.find((element) => element.id == id)
+                let producto = productos.find((element) => element.id == id)
                 productos_carrito.push(producto)
                 console.log(productos_carrito);
                 guardarLS("carrito", productos_carrito)

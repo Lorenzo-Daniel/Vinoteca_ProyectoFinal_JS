@@ -47,7 +47,7 @@ const login = () => {
     });
 }
 
-//Muestra u oculta la contraseña alternando segun la condicion a travs del atrubuto type
+//Muestra u oculta la contraseña alternando segun la condicion a traves del atributo type
 const mostrarPassword = () => {
     let cambio = document.getElementById("loginPassword");
     if (cambio.type == "password") {
@@ -76,6 +76,7 @@ const usuarioIngresado = () => {
         console.log(obtenerSSIngresado.Nombre);
     }
 }
+
 document.getElementById("btnPasword").addEventListener("click", mostrarPassword);
 usuarioIngresado();
 login();
